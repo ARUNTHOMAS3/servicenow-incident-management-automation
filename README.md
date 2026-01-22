@@ -1,40 +1,49 @@
 # ServiceNow Incident Management Automation
 
 ## Project Overview
-This project demonstrates automatic assignment of incidents using ServiceNow Flow Designer.
+This project demonstrates automated incident assignment using ServiceNow Flow Designer.
 
-When a new incident is created, the system automatically assigns it to a predefined assignment group.
+When a new incident is created, the system automatically assigns it to a predefined assignment group without manual intervention.
+
+---
 
 ## Business Requirement
-Manual assignment of incidents causes delay and SLA breach.
+Manual assignment of incidents causes:
+- Delays in response
+- SLA breaches
+- Increased workload for service desk agents
 
-The goal is to:
-- Automatically assign incidents on creation
+### Objective
+- Auto-assign incidents on creation
 - Reduce manual effort
 - Improve response time
 
-## Solution
-A Flow Designer automation was created with:
+---
 
-- Trigger: Incident Created
-- Condition: State = New
-- Action: Update Assignment Group
+## Solution Overview
+A ServiceNow Flow Designer automation was implemented with the following logic:
+
+- **Trigger:** Incident Created
+- **Condition:** State = New
+- **Action:** Update Assignment Group
+
+---
 
 ## Flow Logic
-1. Incident is created
-2. Flow is triggered
-3. System checks incident state
-4. Assignment group is automatically updated
+1. User creates a new incident
+2. Flow Designer trigger executes
+3. System validates incident state
+4. Assignment group is updated automatically
 
-## Tools Used
+---
+
+## Tools & Technologies
 - ServiceNow Flow Designer
-- Incident Management
+- Incident Management (ITSM)
 - Update Sets
+- Global Application
 
-## Result
-- Assignment group populated automatically
-- No manual intervention required
-- Flow tested successfully
+---
 
-## Screenshots
-Screenshots are available in the `/screenshots` folder.
+## Testing & Validation
+The flow was tested by creating new incidents with
